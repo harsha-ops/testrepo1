@@ -11,6 +11,7 @@ urlpatterns = [
     path("createtrip", views.createtrip),
     path("destination/<tripID>", views.tripdetails),
     path("JoinTrip/<tripID>", views.JoinTrip),
-    path("cancel/<tripID>", views.cancel)
+    path("cancel/<tripID>", views.cancel),
+    path('home/', views.home, name='home')
 ]
  

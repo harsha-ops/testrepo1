@@ -21,7 +21,7 @@ def register(request):
     request.session['loggedInId']= newUser.id
 
     return redirect("/travels")
-
+    
 def login(request):
     print(request.POST)
     resultFromValidator = User.objects.loginValidator(request.POST)
@@ -103,3 +103,7 @@ def cancel(request, tripID):
     this_trip.PossibleTrips.remove(loggedInUser)
 
     return redirect("/travels")
+
+
+def home(request):
+    return render(request,'templates/home.html')
